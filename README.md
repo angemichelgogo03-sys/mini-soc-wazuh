@@ -26,7 +26,7 @@ Les règles sont écrites en XML (la règle 2 utilise une expression régulière
 
 ## Tests
 
-J'ai simulé les comportements surveillés (plusieurs mauvais mots de passe, commande PowerShell contenant des mots suspects) : les deux règles se sont déclenchées. Voir le dossier `captures/`.
+J'ai simulé les comportements surveillés (plusieurs mauvais mots de passe, commande PowerShell contenant des mots suspects) : les deux règles se sont déclenchées. Voir les captures d'écran à la racine du dépôt.
 
 ## Tableau de bord
 
@@ -38,5 +38,5 @@ L'agent Windows s'est arrêté à cause d'une balise `<localfile>` mal placée d
 
 ## Contenu du dépôt
 
-- `captures/` : captures d'écran
+- `les fichiers .png : captures d'écran.
 - `local_rules.xml` : les deux règles
