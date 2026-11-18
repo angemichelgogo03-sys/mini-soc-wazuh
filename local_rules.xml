@@ -1,0 +1,23 @@
+<group name="custom,">
+
+  <!-- Règle 1 : connexion suspecte (5 échecs en 2 minutes) -->
+  <rule id="100001" level="10" frequency="5" timeframe="120">
+    <if_matched_sid>60122</if_matched_sid>
+    <description>Connexion suspecte : 5 échecs de connexion en 2 minutes</description>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
+  </rule>
+
+  <!-- Règle 2 : script PowerShell anormal -->
+  <rule id="100002" level="12">
+    <if_group>windows</if_group>
+    <field name="win.system.eventID">^4104$</field>
+    <field name="win.eventdata.scriptBlockText" type="pcre2">(?i)(-enc|-encodedcommand|downloadstring|invoke-expression|iex\s|bypass|hidden)</field>
+    <description>Exécution de script PowerShell anormal</description>
+    <mitre>
+      <id>T1059.001</id>
+    </mitre>
+  </rule>
+
+</group>
